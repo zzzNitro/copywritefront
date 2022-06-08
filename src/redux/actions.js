@@ -5,7 +5,7 @@ export const GET_TEXT = 'GET_TEXT'
 export function getText(iecho){
     return async (dispatch) => {
         try {
-            const response = await axios.get(`http://localhost:3001?iecho=${iecho ? iecho : ''}`)
+            const response = await axios.get(`https://copywriteback.herokuapp.com/?iecho=${iecho ? iecho : ''}`)
             return dispatch({
                 type: GET_TEXT,
                 payload: response.data
